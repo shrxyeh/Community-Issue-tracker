@@ -1,3 +1,5 @@
+<img width="1891" height="864" alt="Screenshot 2025-11-29 011400" src="https://github.com/user-attachments/assets/dc9a38e2-27f7-40dd-b3d7-c7f22d0add42" />
+
 # Community Issue Reporter & Resolution Tracker
 
 A modern, feature-rich full-stack web application that enables residents to report local community issues (potholes, water leakage, waste pickup delays, broken streetlights) and allows admins to track, respond, and update their resolution status with real-time notifications.
@@ -109,26 +111,20 @@ A modern, feature-rich full-stack web application that enables residents to repo
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+<img width="1898" height="868" alt="Screenshot 2025-11-29 011044" src="https://github.com/user-attachments/assets/4a3ab88c-69eb-4098-9376-756e0befa7f0" />
+
 *Modern card-based layout with filters and WhatsApp-style notification badges*
 
 ### Report Issue
-![Report Issue](screenshots/report.png)
+<img width="1901" height="871" alt="Screenshot 2025-11-29 011101" src="https://github.com/user-attachments/assets/dd021809-74ea-4b17-b392-0f85b328e091" />
+
 *Multi-section form with photo upload, location picker, and reporter info*
 
 ### Admin Dashboard
-![Admin Dashboard](screenshots/dashboard.png)
+<img width="1891" height="864" alt="Screenshot 2025-11-29 011400" src="https://github.com/user-attachments/assets/2b1af902-3fb0-4f10-b4e9-58d6cf1d62c9" />
+
 *Comprehensive statistics with colorful gradient cards and charts*
 
-### Issue Details & Comments
-![Issue Details](screenshots/issue-details.png)
-*Modal view with full details, admin actions, and comment thread*
-
-### Dark Mode
-![Dark Mode](screenshots/dark-mode.png)
-*Beautiful dark theme across the entire application*
-
-> **Note**: Add actual screenshots to a `/screenshots` folder in your repository
 
 ## Prerequisites
 
@@ -339,8 +335,8 @@ Get all issues with unread comment counts
     "totalComments": 3,
     "unreadAdminComments": 1,
     "unreadReporterComments": 0,
-    "createdAt": "2024-01-15T10:30:00Z",
-    "updatedAt": "2024-01-15T10:30:00Z"
+    "createdAt": "2025-01-15T10:30:00Z",
+    "updatedAt": "2025-01-15T10:30:00Z"
   }
 ]
 ```
@@ -585,7 +581,7 @@ MIT License - Free to use for learning and development.
 
 Built for ProU Technology Assessment
 - **Track**: Full-stack Development (Track 3)
-- **Date**: November 2024
+- **Date**: November 2025
 
 ## Acknowledgments
 
