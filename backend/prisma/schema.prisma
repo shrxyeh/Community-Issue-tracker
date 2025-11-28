@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Issue {
+  id              Int       @id @default(autoincrement())
+  title           String
+  description     String
+  category        String
+  location        String
+  photoUrl        String?   @map("photo_url")
+  status          String    @default("Pending")
+  reporterName    String?   @map("reporter_name")
+  reporterEmail   String?   @map("reporter_email")
+  reporterPhone   String?   @map("reporter_phone")
+  lastAdminView   DateTime? @map("last_admin_view")
+  lastReporterView DateTime? @map("last_reporter_view")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  comments        Comment[]
+
+  @@map("issues")
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  issueId   Int      @map("issue_id")
+  issue     Issue    @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  authorName String  @map("author_name")
+  authorType String  @map("author_type") // "admin" or "reporter"
+  content   String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("comments")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("admins")
+}

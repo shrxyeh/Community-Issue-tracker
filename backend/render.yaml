@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: community-issue-tracker-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npx prisma generate
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_BUCKET
+        value: issue-photos
+      - key: FRONTEND_URL
+        sync: false
